@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B99002926FCE9EF00B5B11C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B99002826FCE9EF00B5B11C /* main.cpp */; };
+		7BD5C0CE270283C800842C39 /* TwoSum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5C0CC270283C800842C39 /* TwoSum.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		7B99002526FCE9EF00B5B11C /* TwoSum */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TwoSum; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B99002826FCE9EF00B5B11C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7BD5C0CC270283C800842C39 /* TwoSum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TwoSum.cpp; sourceTree = "<group>"; };
+		7BD5C0CD270283C800842C39 /* TwoSum.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TwoSum.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				7B99002826FCE9EF00B5B11C /* main.cpp */,
+				7BD5C0CC270283C800842C39 /* TwoSum.cpp */,
+				7BD5C0CD270283C800842C39 /* TwoSum.hpp */,
 			);
 			path = TwoSum;
 			sourceTree = "<group>";
@@ -88,7 +93,7 @@
 		7B99001D26FCE9EF00B5B11C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					7B99002426FCE9EF00B5B11C = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD5C0CE270283C800842C39 /* TwoSum.cpp in Sources */,
 				7B99002926FCE9EF00B5B11C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,7 +170,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -222,7 +228,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -239,6 +245,7 @@
 		7B99002D26FCE9EF00B5B11C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LV4N957VNT;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -249,6 +256,7 @@
 		7B99002E26FCE9EF00B5B11C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LV4N957VNT;
 				ENABLE_HARDENED_RUNTIME = YES;
