@@ -24,30 +24,33 @@ TwoSum::TwoSum(vector<int> v, int t){
     target = t;
 }
  
+//BRUTE FORCE
+/*
 void TwoSum::Solution(){
     
-    for(i = start + 1; i < values.size(); i++)
+    for(i = start + 1; i < values.size(); i++)//i is always greater then our starting position
     {
-        sum = values[start] + values[i];
+        sum = values[start] + values[i];//add the first and second position
         if(sum == target){
-            cout<< "[" << start << "," << i << "]" << "\n";
+            cout<< "[" << start << "," << i << "]" << "\n";//if we found the numbers that add to target then print
             break;
         }
         
         else if(start == values.size() - 2 && i == values.size() - 1 && sum != target)
         {
-            cout << "Target not found\n";
+            cout << "Target not found\n";//if start is equal to the second to last position and i is equal to the last position and the target is not found the print not found
             break;
         }
          
     }
         if(sum != target && i == values.size())
         {
-            start++;
-            Solution();
+            start++;//if we've gone through every position at i up to the size of the vector move our starting position up 1
+            Solution();//recall our function to start at the new positions
         }
 }
- 
+*/
+//BRUTE FORCE
 vector<int> TwoSum::twoSum(vector<int>& nums, int target){
     for(i = start + 1; i < nums.size(); i++)//i is always greater then our starting position
     {
@@ -71,51 +74,3 @@ vector<int> TwoSum::twoSum(vector<int>& nums, int target){
         }
     return {start, i};
 }
-
-
-
-/*
-//WORK WITH PRINT STATEMENTS
-void TwoSum::loop(){
-    
-    for(i = start + 1; i < values.size(); i++)
-    {
-        cout << "The value of start is " << start << " \n";
-        cout << "The value of i is " << i << "\n";
-        sum = values[start] + values[i];
-        cout << "Sum= " << values[start] << "+" << values[i] << "= " << sum << "\n";
-        cout << "\n";
-        if(sum == target){
-            cout<< start << " " << i << "\n";
-            break;
-        }
-        
-        else if(start == values.size() - 2 && i == values.size() - 1 && sum != target)
-        {
-            cout << "Target not found\n";
-            break;
-        }
-         
-    }
-    counter++;
-    cout<< "counter: " << counter << " \n";
-    TwoSum::find_Two();
-}
-*/
-/*
-void TwoSum::find_Two(){
-            
-            if(sum != target && i == values.size())
-            {
-                cout << "\n";
-                cout << "Second method occurs \n";
-                cout << "\n";
-                start++;
-                i--;
-                cout << "The value of i is now " << i << "\n";
-                TwoSum::loop();
-            }
-            
-}
-*/
-

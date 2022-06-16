@@ -58,7 +58,7 @@ int main(int argc, const char * argv[]){
 
     //TwoSum(testValues, target);//In main class definition
 
-    //Solution();//in main function call
+    //testObj.Solution();//in main function call
     
      return 0;
 }
