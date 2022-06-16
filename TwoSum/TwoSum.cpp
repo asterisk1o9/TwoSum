@@ -66,8 +66,8 @@ vector<int> TwoSum::twoSum(vector<int>& nums, int target){
     }
         if(sum != target && i == nums.size())
         {
-            start++;
-            twoSum(nums, target);
+            start++;//if we've gone through every position at i up to the size of the vector move our starting position up 1
+            twoSum(nums, target);//recall our function to start at the new positions
         }
     return {start, i};
 }
