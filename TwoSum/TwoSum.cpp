@@ -59,7 +59,6 @@ vector<int> TwoSum::twoSum(vector<int>& nums, int target){
         
         else if(start == nums.size() - 2 && i == nums.size() - 1 && sum != target)
         {
-            cout << nums.size()-1 << "\n";
             cout << "Target not found\n";//if start is equal to the second to last position and i is equal to the last position and the target is not found the print not found
             break;
         }
