@@ -18,12 +18,13 @@ int i = 1;
 int start = 0;
 //vector<int> values;
 
-
+/*
 TwoSum::TwoSum(vector<int> v, int t){
     values = v;
     target = t;
 }
- 
+ */
+
 //BRUTE FORCE
 /*
 void TwoSum::Solution(){
@@ -50,6 +51,7 @@ void TwoSum::Solution(){
         }
 }
 */
+
 //BRUTE FORCE
 vector<int> TwoSum::twoSum(vector<int>& nums, int target){
     for(i = start + 1; i < nums.size(); i++)//i is always greater then our starting position
