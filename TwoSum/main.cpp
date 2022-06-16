@@ -15,9 +15,11 @@ int main(int argc, const char * argv[]){
     
     vector<int> testValues = {2,7,11,15};
     int target = 9;
-    TwoSum testObj(testValues, target);
+    //TwoSum testObj(testValues, target);
     
-    testObj.twoSum(testValues, target);
+    TwoSum testObj;
+    
+    //testObj.twoSum(testValues, target);
 
     //testObj.Solution();//in main function call
     

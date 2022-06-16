@@ -16,14 +16,12 @@ int sum;
 int target;
 int i = 1;
 int start = 0;
-//vector<int> values;
-
-
+/*
 TwoSum::TwoSum(vector<int> v, int t){
     values = v;
     target = t;
 }
- 
+ */
 
 //BRUTE FORCE
 vector<int> TwoSum::twoSum(vector<int>& nums, int target){
