@@ -19,9 +19,8 @@ int main(int argc, const char * argv[]){
     
     TwoSum testObj;
     
-    //testObj.twoSum(testValues, target);
+    testObj.twoSum(testValues, target);
 
-    //testObj.Solution();//in main function call
     
      return 0;
 }
