@@ -26,6 +26,7 @@ class TwoSum{
     TwoSum(std::vector<int> v, int t);
     
     void Solution();
+    vector<int> twoSum(vector<int>& nums, int target);
     
     //void find_Two();//For method with prints
     //void loop();//For method with prints

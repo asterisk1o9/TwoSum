@@ -16,7 +16,6 @@ int sum;
 int target;
 int i = 1;
 int start = 0;
-int counter =1;
 //vector<int> values;
 
 
@@ -49,6 +48,29 @@ void TwoSum::Solution(){
         }
 }
  
+vector<int> TwoSum::twoSum(vector<int>& nums, int target){
+    for(i = start + 1; i < nums.size(); i++)
+    {
+        sum = nums[start] + nums[i];
+        if(sum == target){
+            cout<< "[" << start << "," << i << "]" << "\n";
+            break;
+        }
+        
+        else if(start == nums.size() - 2 && i == nums.size() - 1 && sum != target)
+        {
+            cout << "Target not found\n";
+            break;
+        }
+         
+    }
+        if(sum != target && i == nums.size())
+        {
+            start++;
+            twoSum(nums, target);
+        }
+    return {start, i};
+}
 
 
 

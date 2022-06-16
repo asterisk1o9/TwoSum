@@ -54,6 +54,8 @@ int main(int argc, const char * argv[]){
     int target = 9;
     TwoSum testObj(testValues, target);
     testObj.Solution();
+    
+    testObj.twoSum(testValues, target);
 
     //TwoSum(testValues, target);//In main class definition
 
