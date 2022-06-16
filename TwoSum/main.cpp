@@ -53,7 +53,6 @@ int main(int argc, const char * argv[]){
     vector<int> testValues = {2,7,11,15};
     int target = 9;
     TwoSum testObj(testValues, target);
-    testObj.Solution();
     
     testObj.twoSum(testValues, target);
 
