@@ -18,7 +18,7 @@ int i = 1;
 int start = 0;
 
 //BRUTE FORCE
-vector<int> TwoSum::twoSum(vector<int>& nums, int target){
+vector<int> TwoSum::twoSumBrute(vector<int>& nums, int target){
     for(i = start + 1; i < nums.size(); i++)//i is always greater then our starting position
     {
         sum = nums[start] + nums[i];//add the first and second position
@@ -37,7 +37,33 @@ vector<int> TwoSum::twoSum(vector<int>& nums, int target){
         if(sum != target && i == nums.size())
         {
             start++;//if we've gone through every position at i up to the size of the vector move our starting position up 1
-            twoSum(nums, target);//recall our function to start at the new positions
+            twoSumBrute(nums, target);//recall our function to start at the new positions
         }
     return {start, i};
+}
+
+vector<int> TwoSum::twoSumHash(vector<int>& nums, int target){
+    
+    vector<int> target_indices;
+    
+    unordered_map<int, int> hash_table;
+    for(int i = 0; i <nums.size(); i++){
+        //int second_integer = target - nums.at(i);
+        int second_integer = target - nums[i];
+        if(hash_table.find(second_integer)!= hash_table.end()){
+            target_indices.push_back(i);
+            target_indices.push_back(hash_table.find(second_integer)->second);
+            break;
+        }
+        else{
+            //hash_table[nums.at(i)] = i;
+            hash_table[nums[i]] = i;
+        }
+    }
+    for(auto e : target_indices){
+        cout << e << " ";
+    }
+    cout << "\n";
+    
+    return target_indices;
 }

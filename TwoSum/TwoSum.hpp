@@ -13,6 +13,7 @@
 #include <string>
 #include <vector>
 #include <cstdlib>
+#include <unordered_map>
 
 using namespace std;
 
@@ -22,7 +23,8 @@ using namespace std;
 class TwoSum{
  public:
     
-    vector<int> twoSum(vector<int>& nums, int target);
+    vector<int> twoSumBrute(vector<int>& nums, int target);
+    vector<int> twoSumHash(vector<int>& nums, int target);
 };
 
  
