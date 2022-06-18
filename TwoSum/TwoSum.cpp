@@ -44,20 +44,20 @@ vector<int> TwoSum::twoSumBrute(vector<int>& nums, int target){
 
 vector<int> TwoSum::twoSumHash(vector<int>& nums, int target){
     
-    vector<int> target_indices;
+    vector<int> target_indices;//second vector to hold our indices
     
-    unordered_map<int, int> hash_table;
-    for(int i = 0; i <nums.size(); i++){
+    unordered_map<int, int> hash_table;//new map
+    for(int i = 0; i <nums.size(); i++){//for loop to go through our original vector
         //int second_integer = target - nums.at(i);
-        int second_integer = target - nums[i];
-        if(hash_table.find(second_integer)!= hash_table.end()){
-            target_indices.push_back(i);
-            target_indices.push_back(hash_table.find(second_integer)->second);
-            break;
+        int second_integer = target - nums[i];//setting our second integer to the difference between our target and current position at i in nums
+        if(hash_table.find(second_integer)!= hash_table.end()){//if we found the number(don't understand the second half)
+            target_indices.push_back(i);//push back i
+            target_indices.push_back(hash_table.find(second_integer)->second);//push back our second integer
+            break;//end the loop, we found our indices
         }
         else{
             //hash_table[nums.at(i)] = i;
-            hash_table[nums[i]] = i;
+            hash_table[nums[i]] = i;//unsure why this step is needed
         }
     }
     for(auto e : target_indices){
