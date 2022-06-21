@@ -12,7 +12,7 @@
 int main(int argc, const char * argv[]){
     
     vector<int> testValues = {2,7,11,15};
-    int target = 9;
+    int target = 11;
     
     TwoSum testObj;
     
