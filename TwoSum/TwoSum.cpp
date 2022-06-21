@@ -50,14 +50,14 @@ vector<int> TwoSum::twoSumHash(vector<int>& nums, int target){
     for(int i = 0; i <nums.size(); i++){//for loop to go through our original vector
         //int second_integer = target - nums.at(i);
         int second_integer = target - nums[i];//setting our second integer to the difference between our target and current position at i in nums
-        if(hash_table.find(second_integer)!= hash_table.end()){//if we found the number(don't understand the second half)
-            target_indices.push_back(i);//push back i
-            target_indices.push_back(hash_table.find(second_integer)->second);//push back our second integer
+        if(hash_table.find(second_integer)!= hash_table.end()){//if we found the number before reaching the end
+            target_indices.push_back(hash_table.find(second_integer)->second);//find the second_integer within the hash table and since our tbales has pairs(x,y) once we find our second integer find second which is our y
+            target_indices.push_back(i);//push back our current i index
             break;//end the loop, we found our indices
         }
         else{
             //hash_table[nums.at(i)] = i;
-            hash_table[nums[i]] = i;//unsure why this step is needed
+            hash_table[nums[i]] = i;//put the value of i and its index in the map
         }
     }
     for(auto e : target_indices){
